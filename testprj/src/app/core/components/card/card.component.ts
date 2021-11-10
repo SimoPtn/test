@@ -7,7 +7,7 @@ import { Card } from '../../../models/card';
   styleUrls: ['./card.component.sass']
 })
 export class CardComponent implements OnInit {
-  @Input() cards: Card[] = [];
+  @Input() card!: Card;
 
   @Output() selected = new EventEmitter<Card>();
 

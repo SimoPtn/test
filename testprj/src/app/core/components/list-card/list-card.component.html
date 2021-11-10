@@ -1,9 +1,5 @@
-<div *ngIf="cards.length > 0; else noCards">
-  <tprj-card *ngFor="let card of cards"></tprj-card>
+<div *ngFor="let card of cards">
+    <tprj-card [card]="card"></tprj-card>
 </div>
 
-<ng-template #noCards>
-  <p>Benvenuti nello shop di</p>
-  <img src="https://www.develhope.co/_nuxt/img/cav_black.9dc2b13.svg" alt="">
-  <p>Clicca sui dettagli del prodotto per visualizzare tutte le informazioni</p>
-</ng-template>
+

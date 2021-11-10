@@ -9,7 +9,7 @@ import { Card } from '../../../models/card';
 export class ContainerAppComponent implements OnInit {
   @Output() selected = new EventEmitter<Card>();
 
-  card: Card[] = [
+  cards: Card[] = [
     {
       id: 1,
       title: "Naruto Funko POP",
