@@ -1,5 +1,6 @@
+
 <div *ngFor="let card of cards">
-    <tprj-card [card]="card"></tprj-card>
+    <tprj-card [card]="card" (selected)="select($event)"></tprj-card>
 </div>
 
 

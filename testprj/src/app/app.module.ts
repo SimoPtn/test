@@ -6,6 +6,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ContainerAppComponent } from './core/container/container-app/container-app.component';
 import { ListCardComponent } from './core/components/list-card/list-card.component';
 import { CardComponent } from './core/components/card/card.component';
+import { DetailsComponent } from './core/components/details/details.component';
 
 
 @NgModule({
@@ -14,6 +15,8 @@ import { CardComponent } from './core/components/card/card.component';
     ContainerAppComponent,
     ListCardComponent,
     CardComponent,
+    DetailsComponent,
+
   ],
   imports: [
     BrowserModule,

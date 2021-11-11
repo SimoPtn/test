@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Card } from '../../../models/card';
 
 @Component({
@@ -7,7 +7,9 @@ import { Card } from '../../../models/card';
   styleUrls: ['./container-app.component.sass']
 })
 export class ContainerAppComponent implements OnInit {
-  @Output() selected = new EventEmitter<Card>();
+  selectedCard!: Card;
+  viewDetails: boolean = false;
+  chart: number = 0;
 
   cards: Card[] = [
     {
@@ -50,5 +52,18 @@ export class ContainerAppComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  selectCard(card: Card): void {
+    this.selectedCard = card;
+    this.viewDetails = true;
+  }
+
+  deselectCard(card: Card): void {
+    this.viewDetails = false;
+  }
+
+  addToChart(card: Card) : void {
+    this.chart++;
+    this.selectedCard = card;
+  }
 
 }

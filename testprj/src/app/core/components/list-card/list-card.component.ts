@@ -18,7 +18,7 @@ export class ListCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  selectCard(card: Card) {
-    this.selectedCard = card;
+  select(card: Card) {
+    this.selected.emit(card);
   }
 }
